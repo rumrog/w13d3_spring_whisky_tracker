@@ -2,6 +2,8 @@ package com.codeclan.example.WhiskyTracker.controllers;
 
 import ch.qos.logback.core.pattern.util.RegularEscapeUtil;
 import com.codeclan.example.WhiskyTracker.models.Distillery;
+import com.codeclan.example.WhiskyTracker.models.Whisky;
+import com.codeclan.example.WhiskyTracker.models.Whisky;
 import com.codeclan.example.WhiskyTracker.repositories.DistilleryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,5 +39,6 @@ public class DistilleryController {
     public ResponseEntity<List<Distillery>> findByRegion(@RequestParam(name = "region") String region) {
         return new ResponseEntity<>(distilleryRepository.findByRegion(region), HttpStatus.OK);
     }
+
 
 }
